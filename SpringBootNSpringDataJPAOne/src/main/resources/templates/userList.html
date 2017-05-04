@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<title>Hello thymeleaf</title>
+</head>
+<body>
+    hello Vishnu!!!
+
+
+ <h1>User list</h1>
+  
+    <table>
+      <tr>
+        <th>NAME</th>
+        <th>Email ID</th>
+        
+      </tr>
+      <tr th:each="usr : ${users}">
+        <td th:text="${usr.name}"/>
+        <td th:text="${usr.email}"/>
+        </tr>
+    </table>
+  
+    <p>
+      <a href="index.html" th:href="@{/}">Return to home</a>
+    </p>
+
+     
+</body>
+</html>
+
+
+
+
+
+
