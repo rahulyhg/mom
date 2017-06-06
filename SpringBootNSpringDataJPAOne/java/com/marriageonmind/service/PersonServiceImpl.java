@@ -1,4 +1,4 @@
-package com.marriageonmind.service;
+/*package com.marriageonmind.service;
 
 
 	import java.util.List;
@@ -38,7 +38,7 @@ import com.marriageonmind.repository.PersonRepository;
 	        Person deletedPerson = PersonRepository.findOne(id);
 	         
 	        if (deletedPerson == null)
-	            throw new PersonNotFound();
+	            throw new PersonNotFound("nothing deleted");
 	         
 	        PersonRepository.delete(deletedPerson);
 	        return deletedPerson;
@@ -56,7 +56,7 @@ import com.marriageonmind.repository.PersonRepository;
 	        Person updatedPerson = PersonRepository.findOne(Person.getId());
 	         
 	        if (updatedPerson == null)
-	            throw new PersonNotFound();
+	            throw new PersonNotFound("nothing deleted");
 	         
 	        updatedPerson.setName(Person.getName());
 	        updatedPerson.setEmplNumber(Person.getEmplNumber());
@@ -64,3 +64,4 @@ import com.marriageonmind.repository.PersonRepository;
 	    }
 	 
 	}
+*/

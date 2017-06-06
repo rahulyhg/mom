@@ -34,7 +34,7 @@ public class User implements Serializable{
 	private MobileNo mobileNo;//only one mobile no.
 	private Category category;
 	private String fullName;
-	private UserCategory userCategory;
+	private Role role;
 	
 	public String getPassword() {
 		return password;
