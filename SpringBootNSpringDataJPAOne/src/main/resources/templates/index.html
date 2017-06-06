@@ -1,25 +1,143 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+  <title>Rauniyar Darpan</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/custom.css" />
 
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-<title>Rauniyar Darpan</title>
+<style>
+  
+  #section1 {
+height:750px;
+color:#fff;
+background-image: url("images/wedding.jpg");
+background-size:100%;
+background-repeat: no-repeat;;
+}
+
+  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+  #section4 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section5 {padding-top:50px;height:500px;color: #fff; background-color: lightgrey;}
+</style>
+
+
 </head>
 <body>
-  Coming soon........
-    
-  
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login to continue</h4>
+      </div>
       
+  <form action="#" th:action="@{/login}" th:object="${login}" method="post">
+      <div class="modal-body">
+             
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" />
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" />
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"/> Remember me</label>
+      <label><input type="checkbox" name="forgotpassword"/> Forgot Password </label>
+    </div>
+    <button type="submit" class="btn btn-default">Login</button>
+      </div>
+
+        <h4> New on Rauniyar Darpan?</h4>
+    <div>
+    <button type="submit" class="btn btn-default">Register free</button>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    
+    </form>
+   
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://rauniyardarpan.com">Rauniyar Darpan</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="#"><a href="#">HOME</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SEARCH <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">SEARCH</a></li>
+          <li><a href="#">SEARCH BY PROFILE ID</a></li>
+         </ul>
+      </li>
+      <li><a href="#">HELP</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+ <li><a data-toggle="modal" data-target="#myModal" href="#"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>     
+ <li><a href="#"><span class="glyphicon glyphicon-user"></span> REGISTER FREE</a></li>
+     </ul>
+  </div>
+</nav>
+
+<div id="section1" class="container-fluid">
+  
+  <h3>You can reach us at rauniyardarpan@gmail.com </h3>
+  <h3>You can whatsapp the marriageable profiles @8709972633</h3>
+
+
+</div>
+<div id="section2" class="container-fluid">
+  <h1>Advanced Search</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section3" class="container-fluid">
+
+	<div class="container">
+  <h2>Register</h2>
+  <button type="button" onClick="location.href='register.html';" class="btn btn-primary btn-lg">REGISTER FREE</button>
+	</div>  
+
+</div>
+
+<div id="section4" class="container-fluid">
+  <h1>Matched By Rauniyar Darpan </h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section5" class="container-fluid">
+  <h1> Other Details</h1>
+
+  <a href="aboutus.html">About Us</a>   
+  <a href="contactus.html">Contact Us</a>   
+  <a href="feedback.html">Feedback</a>   
+  <a href="termsofuse.html">Terms of Use</a>   
+  <a href="privacypolicy.html">Privacy Policy</a>   
+
+</div>
+
 </body>
 </html>
-
-
-
-
-
-
