@@ -1,4 +1,4 @@
-package com.marriageonmind.model.marriage;
+package com.marriageonmind.model;
 
 import java.io.Serializable;
 
@@ -8,13 +8,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Father implements Serializable{
+public class LandLineNo implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
+	private String number;
+	private String STDCode;
 	
-private String fullName;
-private Occupation occupation;
-
 
 }

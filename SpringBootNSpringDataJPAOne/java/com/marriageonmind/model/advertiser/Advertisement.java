@@ -1,6 +1,7 @@
 package com.marriageonmind.model.advertiser;
 
 import java.io.Serializable;
+import java.net.URL;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -24,6 +25,9 @@ private Set<MobileNo> mobileNo;
 private Email emailID;
 private PrintSpace printSpace;
 private PaymentStatus paymentStatus;
+
+private URL photoURL;
+private URL website;
 
 
 }

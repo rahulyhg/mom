@@ -12,6 +12,7 @@ import javax.persistence.Id;
 
 import com.marriageonmind.model.Address;
 import com.marriageonmind.model.Email;
+import com.marriageonmind.model.LandLineNo;
 import com.marriageonmind.model.MobileNo;
 
 @Entity
@@ -24,13 +25,14 @@ public class Groom implements Serializable {
 	private String fullName;
 	private Email email;
 	private Set<MobileNo> mobileNos;
-	private boolean alive;
-	
+	private LandLineNo landLineNumber;
+
 	private int heightFeet;
 	private int heightInch;
 	
 	private Father father;
 	private Mother mother;
+	private Set<Relative> relatives;
 	
 	private Job job;
 		
@@ -51,6 +53,7 @@ public class Groom implements Serializable {
 	private Address currentAddress;
 	private Address permanentAddress;
 	
+private Set<Qualification> qualifications;
 
 	
 	

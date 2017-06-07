@@ -13,6 +13,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import com.marriageonmind.model.marriage.Category;
+import com.marriageonmind.model.marriage.Gender;
 
 
 
@@ -33,7 +34,9 @@ public class User implements Serializable{
 
 	private MobileNo mobileNo;//only one mobile no.
 	private Category category;
-	private String fullName;
+	private String firstName;
+	private String lastName;
+	private Gender gender;
 	private Role role;
 	
 	public String getPassword() {

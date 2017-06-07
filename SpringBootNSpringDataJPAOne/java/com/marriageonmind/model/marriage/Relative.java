@@ -8,13 +8,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Father implements Serializable{
+public class Relative implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
 private String fullName;
 private Occupation occupation;
-
+private Gender gender;
 
 }

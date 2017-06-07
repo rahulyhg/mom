@@ -15,11 +15,12 @@ public class Profile implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private Long profileID;
-private boolean settled;
+private ProfileStatus profileStatus;
 private PrintSpace printSpace;
 private PaymentStatus paymentStatus;
 private boolean tobePublishedInMagazine;
 private boolean complete;
+
 
 
  

@@ -1,8 +1,19 @@
 package com.marriageonmind.model.marriage;
 
-public class Sister {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Sister implements Serializable{
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 private String name;
 private String husbandName;
+private Occupation husbandOccupation;
 private boolean housewife;
 private Occupation occupation;
 }
