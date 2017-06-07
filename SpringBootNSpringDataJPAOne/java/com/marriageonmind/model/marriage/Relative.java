@@ -14,7 +14,7 @@ public class Relative implements Serializable{
 	private Long id;
 	
 private String fullName;
-private Occupation occupation;
+private Profession occupation;
 private Gender gender;
 
 }

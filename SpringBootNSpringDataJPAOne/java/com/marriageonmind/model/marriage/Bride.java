@@ -34,6 +34,7 @@ private Complexion complexion;
 private Date dateOfBirth; //apply constraint //verify through adharid
 private Set<MobileNo> mobileNos;// apply constraint
 private LandLineNo landLineNumber;
+private Profession profession;
 
 private Email emailId;//only one emailID
 private Set<URL> photo;//

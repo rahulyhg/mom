@@ -14,7 +14,7 @@ public class Qualification implements Serializable{
 	private Long id;
 	private QualificationLevel qualificationLevel;
 	private QualificationStatus qualificationStatus;
-	private String name;//it should be unique
-	private String stream;
+	private QualificationName qualificationName;//it should be unique
+	private QualificationStream stream;
 
 }

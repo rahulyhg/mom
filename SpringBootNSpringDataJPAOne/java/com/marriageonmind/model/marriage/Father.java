@@ -14,7 +14,8 @@ public class Father implements Serializable{
 	private Long id;
 	
 private String fullName;
-private Occupation occupation;
+private Profession profession;
+private String professionDescription;
 
 
 }

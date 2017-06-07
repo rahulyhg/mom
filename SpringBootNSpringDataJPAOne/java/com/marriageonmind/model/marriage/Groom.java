@@ -27,14 +27,16 @@ public class Groom implements Serializable {
 	private Set<MobileNo> mobileNos;
 	private LandLineNo landLineNumber;
 
+	private Profession profession;
+	private Job job;
+	
 	private int heightFeet;
 	private int heightInch;
 	
 	private Father father;
 	private Mother mother;
 	private Set<Relative> relatives;
-	
-	private Job job;
+
 		
 	private String AdharID;//apply constraint
 	private ManglikStatus manglikStatus;

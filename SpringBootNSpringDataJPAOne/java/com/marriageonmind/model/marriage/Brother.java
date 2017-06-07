@@ -15,6 +15,9 @@ public class Brother implements Serializable{
 	
 private String fullName;
 private String wifeName;
-private Occupation occupation;
+private Profession profession;
+private String professionDescription;
+private Qualification qualification;
+
 
 }
