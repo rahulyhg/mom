@@ -21,13 +21,16 @@ public class Bride implements Serializable{
 @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private String fullName;
+	private String firstName;
+	private String lastName;
 private int heightFeet; //apply constraint
 private int heightInch; //apply constraint
+private int heightInCm;
 
 private JobStatus jobStatus;
 private Father father;
 private Mother mother;
+private String alsoQualifiedIn;
 private Set<Relative> relatives;
 
 private Complexion complexion;

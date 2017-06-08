@@ -12,6 +12,7 @@ public class Sister implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private String name;
+private boolean married;
 private String husbandName;
 private Profession husbandOccupation;
 private boolean housewife;

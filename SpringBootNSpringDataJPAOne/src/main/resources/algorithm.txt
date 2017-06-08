@@ -1,0 +1,17 @@
+every bride and groom must be ranked based on parameters
+
+bride:
+1 character
+2 family
+3 beauty
+4 complexion
+5 income
+6 patience 
+
+
+groom:
+1 greedyfordowry
+2 family
+3 income 
+4 handsome
+5 complexion

@@ -1,5 +1,5 @@
 package com.marriageonmind.model.marriage;
 
 public enum Complexion {
-FAIR,MILKYWHITE,WHEATISH,DARK
+	DARK,WHEATISH,FAIR,VERYFAIR,GORA,MILKYWHITE
 }

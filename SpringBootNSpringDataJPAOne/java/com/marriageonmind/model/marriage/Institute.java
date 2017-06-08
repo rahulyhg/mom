@@ -7,19 +7,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import com.marriageonmind.model.MobileNo;
+import com.marriageonmind.model.Address;
 
 @Entity
-public class Father implements Serializable{
+public class Institute implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
+	private String name;
+	private Address address;
 	
-private String fullName;
-private boolean alive;
-private Profession profession;
-private Job job;
-private MobileNo mobileNo;
-
 
 }

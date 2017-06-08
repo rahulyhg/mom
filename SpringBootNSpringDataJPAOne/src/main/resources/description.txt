@@ -1,0 +1,20 @@
+
+storing the birth date and birth time easiest way joda or jdk
+uploading the image as in olx format
+
+
+
+
+
+
+modules:
+admin
+marriage
+advertiser
+payment
+registration
+login
+logout
+sms
+email
+sanrakshak

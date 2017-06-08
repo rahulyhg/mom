@@ -16,5 +16,7 @@ public class Qualification implements Serializable{
 	private QualificationStatus qualificationStatus;
 	private QualificationName qualificationName;//it should be unique
 	private QualificationStream stream;
+	private String speciality; /* convent educated etc */
+	
 
 }

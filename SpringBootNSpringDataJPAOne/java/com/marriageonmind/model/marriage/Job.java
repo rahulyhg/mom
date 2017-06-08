@@ -18,6 +18,7 @@ public class Job implements Serializable{
 	private Long id;
 	private String designation;
 	private Organization organization;
+	private double salaryPerAnnum;
 	
 	
 

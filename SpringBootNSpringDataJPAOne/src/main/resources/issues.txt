@@ -1,0 +1,5 @@
+Primary key
+all do not have email id
+fb 
+mobile no or email id
+

@@ -1,0 +1,6 @@
+only one email id for one person
+mobileno is mandatory
+address is not optional
+
+
+

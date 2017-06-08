@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.marriageonmind.model.Address;
+import com.marriageonmind.model.City;
 import com.marriageonmind.model.Email;
 import com.marriageonmind.model.LandLineNo;
 import com.marriageonmind.model.MobileNo;
@@ -22,7 +23,10 @@ public class Groom implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	private String fullName;
+	private String firstName;
+	private String lasttName;
+	
+	private String alsoQualifiedIn;
 	private Email email;
 	private Set<MobileNo> mobileNos;
 	private LandLineNo landLineNumber;
@@ -32,25 +36,25 @@ public class Groom implements Serializable {
 	
 	private int heightFeet;
 	private int heightInch;
+	private int heightInCm;
 	
 	private Father father;
 	private Mother mother;
 	private Set<Relative> relatives;
-
-		
+	private Set<URL> photo;//
+	private URL video;//youtube Video URL
+	
 	private String AdharID;//apply constraint
 	private ManglikStatus manglikStatus;
 	private MaritalStatus maritalStatus;
-	
-
-	private URL video;//youtube Video URL
-	
 	
 	private Date dateOfBirth;
 	
 	
 	private Set<Brother> brothers;
 	private Set<Sister> sisters;
+	
+	private City nativePlace;
 	
 	private Address currentAddress;
 	private Address permanentAddress;
