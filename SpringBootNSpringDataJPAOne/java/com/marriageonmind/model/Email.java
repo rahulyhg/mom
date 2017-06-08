@@ -8,15 +8,11 @@ import javax.persistence.Id;
 @Entity
 public class Email implements Serializable{
 	@Id
-private String emilID;
+private String emailID;
+private boolean primary;
 private boolean verified;
 private boolean thisFBID;
-public String getEmilID() {
-	return emilID;
-}
-public void setEmilID(String emilID) {
-	this.emilID = emilID;
-}
+
 public boolean isVerified() {
 	return verified;
 }

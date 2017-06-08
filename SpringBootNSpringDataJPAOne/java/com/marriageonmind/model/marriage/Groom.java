@@ -40,6 +40,7 @@ public class Groom implements Serializable {
 	
 	private Father father;
 	private Mother mother;
+	
 	private Set<Relative> relatives;
 	private Set<URL> photo;//
 	private URL video;//youtube Video URL

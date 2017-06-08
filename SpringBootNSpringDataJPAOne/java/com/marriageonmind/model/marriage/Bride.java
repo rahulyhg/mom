@@ -5,7 +5,10 @@ import java.net.URL;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,12 +30,18 @@ private int heightFeet; //apply constraint
 private int heightInch; //apply constraint
 private int heightInCm;
 
+@Enumerated(EnumType.STRING)
 private JobStatus jobStatus;
+
+@Embedded
 private Father father;
+@Embedded
 private Mother mother;
+
 private String alsoQualifiedIn;
 private Set<Relative> relatives;
 
+@Enumerated(EnumType.STRING)
 private Complexion complexion;
 private Date dateOfBirth; //apply constraint //verify through adharid
 private Set<MobileNo> mobileNos;// apply constraint
