@@ -14,6 +14,25 @@ public class LandLineNo implements Serializable{
 	private Long id;
 	private String number;
 	private String STDCode;
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getNumber() {
+		return number;
+	}
+	public void setNumber(String number) {
+		this.number = number;
+	}
+	public String getSTDCode() {
+		return STDCode;
+	}
+	public void setSTDCode(String sTDCode) {
+		STDCode = sTDCode;
+	}
+	
 	
 
 }

@@ -1,0 +1,23 @@
+use app server
+tomEE or JBoss
+use connection pool
+===========
+apply hibernate caching
+========
+use JMS
+=========
+use cloud technologies
+ie autoscaling and loadbalancing
+============
+
+think about hierarchial categories
+===
+using db script with liquid base 
+========
+apply best design patterns
+=======
+decide the PK for all entities
+======
+is it so that while using spring data jpa we do not need to create DAO?
+
+

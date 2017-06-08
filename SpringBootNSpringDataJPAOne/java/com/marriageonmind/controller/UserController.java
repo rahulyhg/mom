@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.marriageonmind.model.User;
-import com.marriageonmind.model.UserDao;
+import com.marriageonmind.repository.UserDao;
 
 @Controller
 public class UserController {

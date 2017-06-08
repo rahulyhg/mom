@@ -28,6 +28,54 @@ private PaymentStatus paymentStatus;
 
 private URL photoURL;
 private URL website;
+public Long getId() {
+	return id;
+}
+public void setId(Long id) {
+	this.id = id;
+}
+public Address getAddress() {
+	return address;
+}
+public void setAddress(Address address) {
+	this.address = address;
+}
+public Set<MobileNo> getMobileNo() {
+	return mobileNo;
+}
+public void setMobileNo(Set<MobileNo> mobileNo) {
+	this.mobileNo = mobileNo;
+}
+public Email getEmailID() {
+	return emailID;
+}
+public void setEmailID(Email emailID) {
+	this.emailID = emailID;
+}
+public PrintSpace getPrintSpace() {
+	return printSpace;
+}
+public void setPrintSpace(PrintSpace printSpace) {
+	this.printSpace = printSpace;
+}
+public PaymentStatus getPaymentStatus() {
+	return paymentStatus;
+}
+public void setPaymentStatus(PaymentStatus paymentStatus) {
+	this.paymentStatus = paymentStatus;
+}
+public URL getPhotoURL() {
+	return photoURL;
+}
+public void setPhotoURL(URL photoURL) {
+	this.photoURL = photoURL;
+}
+public URL getWebsite() {
+	return website;
+}
+public void setWebsite(URL website) {
+	this.website = website;
+}
 
 
 }

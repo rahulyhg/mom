@@ -16,5 +16,31 @@ public class Relative implements Serializable{
 private String fullName;
 private Profession occupation;
 private Gender gender;
+public Long getId() {
+	return id;
+}
+public void setId(Long id) {
+	this.id = id;
+}
+public String getFullName() {
+	return fullName;
+}
+public void setFullName(String fullName) {
+	this.fullName = fullName;
+}
+public Profession getOccupation() {
+	return occupation;
+}
+public void setOccupation(Profession occupation) {
+	this.occupation = occupation;
+}
+public Gender getGender() {
+	return gender;
+}
+public void setGender(Gender gender) {
+	this.gender = gender;
+}
+
+
 
 }

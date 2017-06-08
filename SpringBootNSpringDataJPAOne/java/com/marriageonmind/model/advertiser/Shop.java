@@ -21,5 +21,41 @@ public class Shop implements Serializable{
 	private String businessName;
 	private Set<String> proprietors;
 	private Set<Photo> ownerPhoto;
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public Photo getShopPhoto() {
+		return shopPhoto;
+	}
+	public void setShopPhoto(Photo shopPhoto) {
+		this.shopPhoto = shopPhoto;
+	}
+	public URL getWebsiteURL() {
+		return websiteURL;
+	}
+	public void setWebsiteURL(URL websiteURL) {
+		this.websiteURL = websiteURL;
+	}
+	public String getBusinessName() {
+		return businessName;
+	}
+	public void setBusinessName(String businessName) {
+		this.businessName = businessName;
+	}
+	public Set<String> getProprietors() {
+		return proprietors;
+	}
+	public void setProprietors(Set<String> proprietors) {
+		this.proprietors = proprietors;
+	}
+	public Set<Photo> getOwnerPhoto() {
+		return ownerPhoto;
+	}
+	public void setOwnerPhoto(Set<Photo> ownerPhoto) {
+		this.ownerPhoto = ownerPhoto;
+	}
 	
 }

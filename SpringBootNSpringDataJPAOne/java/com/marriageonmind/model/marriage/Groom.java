@@ -61,6 +61,222 @@ public class Groom implements Serializable {
 	
 private Set<Qualification> qualifications;
 
+public Long getId() {
+	return id;
+}
+
+public void setId(Long id) {
+	this.id = id;
+}
+
+public String getFirstName() {
+	return firstName;
+}
+
+public void setFirstName(String firstName) {
+	this.firstName = firstName;
+}
+
+public String getLasttName() {
+	return lasttName;
+}
+
+public void setLasttName(String lasttName) {
+	this.lasttName = lasttName;
+}
+
+public String getAlsoQualifiedIn() {
+	return alsoQualifiedIn;
+}
+
+public void setAlsoQualifiedIn(String alsoQualifiedIn) {
+	this.alsoQualifiedIn = alsoQualifiedIn;
+}
+
+public Email getEmail() {
+	return email;
+}
+
+public void setEmail(Email email) {
+	this.email = email;
+}
+
+public Set<MobileNo> getMobileNos() {
+	return mobileNos;
+}
+
+public void setMobileNos(Set<MobileNo> mobileNos) {
+	this.mobileNos = mobileNos;
+}
+
+public LandLineNo getLandLineNumber() {
+	return landLineNumber;
+}
+
+public void setLandLineNumber(LandLineNo landLineNumber) {
+	this.landLineNumber = landLineNumber;
+}
+
+public Profession getProfession() {
+	return profession;
+}
+
+public void setProfession(Profession profession) {
+	this.profession = profession;
+}
+
+public Job getJob() {
+	return job;
+}
+
+public void setJob(Job job) {
+	this.job = job;
+}
+
+public int getHeightFeet() {
+	return heightFeet;
+}
+
+public void setHeightFeet(int heightFeet) {
+	this.heightFeet = heightFeet;
+}
+
+public int getHeightInch() {
+	return heightInch;
+}
+
+public void setHeightInch(int heightInch) {
+	this.heightInch = heightInch;
+}
+
+public int getHeightInCm() {
+	return heightInCm;
+}
+
+public void setHeightInCm(int heightInCm) {
+	this.heightInCm = heightInCm;
+}
+
+public Father getFather() {
+	return father;
+}
+
+public void setFather(Father father) {
+	this.father = father;
+}
+
+public Mother getMother() {
+	return mother;
+}
+
+public void setMother(Mother mother) {
+	this.mother = mother;
+}
+
+public Set<Relative> getRelatives() {
+	return relatives;
+}
+
+public void setRelatives(Set<Relative> relatives) {
+	this.relatives = relatives;
+}
+
+public Set<URL> getPhoto() {
+	return photo;
+}
+
+public void setPhoto(Set<URL> photo) {
+	this.photo = photo;
+}
+
+public URL getVideo() {
+	return video;
+}
+
+public void setVideo(URL video) {
+	this.video = video;
+}
+
+public String getAdharID() {
+	return AdharID;
+}
+
+public void setAdharID(String adharID) {
+	AdharID = adharID;
+}
+
+public ManglikStatus getManglikStatus() {
+	return manglikStatus;
+}
+
+public void setManglikStatus(ManglikStatus manglikStatus) {
+	this.manglikStatus = manglikStatus;
+}
+
+public MaritalStatus getMaritalStatus() {
+	return maritalStatus;
+}
+
+public void setMaritalStatus(MaritalStatus maritalStatus) {
+	this.maritalStatus = maritalStatus;
+}
+
+public Date getDateOfBirth() {
+	return dateOfBirth;
+}
+
+public void setDateOfBirth(Date dateOfBirth) {
+	this.dateOfBirth = dateOfBirth;
+}
+
+public Set<Brother> getBrothers() {
+	return brothers;
+}
+
+public void setBrothers(Set<Brother> brothers) {
+	this.brothers = brothers;
+}
+
+public Set<Sister> getSisters() {
+	return sisters;
+}
+
+public void setSisters(Set<Sister> sisters) {
+	this.sisters = sisters;
+}
+
+public City getNativePlace() {
+	return nativePlace;
+}
+
+public void setNativePlace(City nativePlace) {
+	this.nativePlace = nativePlace;
+}
+
+public Address getCurrentAddress() {
+	return currentAddress;
+}
+
+public void setCurrentAddress(Address currentAddress) {
+	this.currentAddress = currentAddress;
+}
+
+public Address getPermanentAddress() {
+	return permanentAddress;
+}
+
+public void setPermanentAddress(Address permanentAddress) {
+	this.permanentAddress = permanentAddress;
+}
+
+public Set<Qualification> getQualifications() {
+	return qualifications;
+}
+
+public void setQualifications(Set<Qualification> qualifications) {
+	this.qualifications = qualifications;
+}
+
 	
 	
 

@@ -14,4 +14,17 @@ public class Country implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private Long id;
 private Set<City> cities;
+public Long getId() {
+	return id;
+}
+public void setId(Long id) {
+	this.id = id;
+}
+public Set<City> getCities() {
+	return cities;
+}
+public void setCities(Set<City> cities) {
+	this.cities = cities;
+}
+
 }

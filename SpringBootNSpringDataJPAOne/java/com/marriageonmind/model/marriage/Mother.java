@@ -13,4 +13,23 @@ public class Mother implements Serializable {
 private String fullName;
 private boolean alive;
 private boolean housewife;
+public String getFullName() {
+	return fullName;
+}
+public void setFullName(String fullName) {
+	this.fullName = fullName;
+}
+public boolean isAlive() {
+	return alive;
+}
+public void setAlive(boolean alive) {
+	this.alive = alive;
+}
+public boolean isHousewife() {
+	return housewife;
+}
+public void setHousewife(boolean housewife) {
+	this.housewife = housewife;
+}
+
 }

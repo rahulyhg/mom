@@ -1,4 +1,4 @@
-package com.marriageonmind.model;
+package com.marriageonmind.repository;
 
 import java.util.List;
 
@@ -7,6 +7,8 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.marriageonmind.model.User;
 
 /**
  * This class is used to access data for the User entity.

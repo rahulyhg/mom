@@ -20,6 +20,43 @@ private PrintSpace printSpace;
 private PaymentStatus paymentStatus;
 private boolean tobePublishedInMagazine;
 private boolean complete;
+public Long getProfileID() {
+	return profileID;
+}
+public void setProfileID(Long profileID) {
+	this.profileID = profileID;
+}
+public ProfileStatus getProfileStatus() {
+	return profileStatus;
+}
+public void setProfileStatus(ProfileStatus profileStatus) {
+	this.profileStatus = profileStatus;
+}
+public PrintSpace getPrintSpace() {
+	return printSpace;
+}
+public void setPrintSpace(PrintSpace printSpace) {
+	this.printSpace = printSpace;
+}
+public PaymentStatus getPaymentStatus() {
+	return paymentStatus;
+}
+public void setPaymentStatus(PaymentStatus paymentStatus) {
+	this.paymentStatus = paymentStatus;
+}
+public boolean isTobePublishedInMagazine() {
+	return tobePublishedInMagazine;
+}
+public void setTobePublishedInMagazine(boolean tobePublishedInMagazine) {
+	this.tobePublishedInMagazine = tobePublishedInMagazine;
+}
+public boolean isComplete() {
+	return complete;
+}
+public void setComplete(boolean complete) {
+	this.complete = complete;
+}
+
 
 
 
