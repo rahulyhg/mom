@@ -1,5 +1,5 @@
 package com.marriageonmind.model.marriage;
 
 public enum JobStatus {
-PREPARINGFORGOVTJOB,BUSINESS,PRIVATE,GOVTJOB
+PREPARINGFORGOVTJOB,BUSINESS
 }

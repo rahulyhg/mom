@@ -8,18 +8,18 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Address implements Serializable{
 @Id
 @GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+private Long id;
 
 @Enumerated(EnumType.STRING)
 private AddressType addressType;
 
-@OneToOne
+@ManyToOne
 private City city;
 
 private String description;

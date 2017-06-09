@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -16,6 +17,9 @@ private String name;
 
 @OneToOne
 private Profession occupation;
+
+@ManyToOne
+private MarriagePerson  marriagePerson;
 
 private String professionDescription;
 

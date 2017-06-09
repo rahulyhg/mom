@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 
 @Entity
@@ -15,6 +16,7 @@ public class City implements Serializable {
 	private Long id;
 	
 	private String name;
+	@ManyToOne
 	private Country country;
 	
 	public String getName() {

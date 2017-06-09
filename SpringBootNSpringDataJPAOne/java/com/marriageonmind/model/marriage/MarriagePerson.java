@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.marriageonmind.model.Address;
@@ -53,6 +54,7 @@ public class MarriagePerson implements Serializable{
 	
 	private Date dateOfBirth; //apply constraint //verify through adharid
 	
+	@OneToMany
 	private Collection<MobileNo> mobileNos;// apply constraint
 	
 	@OneToOne
@@ -64,8 +66,11 @@ public class MarriagePerson implements Serializable{
 	@OneToOne
 	private Email emailId;//only one emailID
 	
+	@OneToMany
 	private Collection<URL> photo;//
-	private URL video;//youtube Video URL
+	
+	
+	private String video;//youtube Video URL
 	
 	private String AdharID;//apply constraint
 	
@@ -76,11 +81,15 @@ public class MarriagePerson implements Serializable{
 	private MaritalStatus maritalStatus;
 
 	@OneToOne
-	private Job job;
+	private EmploymentStatus job;
 
+	@OneToMany(mappedBy="marriagePerson")
 	private Collection<Brother> brothers;
+
+	@OneToMany(mappedBy="marriagePerson")
 	private Collection<Sister> sisters;
 	
+	@OneToMany
 	private Collection<Address> address;
 	
 
@@ -223,10 +232,10 @@ public void setEmailId(Email emailId) {
 	this.emailId = emailId;
 }
 
-public URL getVideo() {
+public String getVideo() {
 	return video;
 }
-public void setVideo(URL video) {
+public void setVideo(String video) {
 	this.video = video;
 }
 public String getAdharID() {
@@ -247,10 +256,10 @@ public MaritalStatus getMaritalStatus() {
 public void setMaritalStatus(MaritalStatus maritalStatus) {
 	this.maritalStatus = maritalStatus;
 }
-public Job getJob() {
+public EmploymentStatus getJob() {
 	return job;
 }
-public void setJob(Job job) {
+public void setJob(EmploymentStatus job) {
 	this.job = job;
 }
 

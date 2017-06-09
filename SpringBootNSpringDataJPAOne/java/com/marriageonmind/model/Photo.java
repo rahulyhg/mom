@@ -15,25 +15,28 @@ public class Photo implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 private Long id;
+
 	
-private URL photoURL;
+private String photoURL;
 private boolean colorPhoto;
 private boolean verified;
 private int photoSize;
 private int photoWidth;
 private int photoHeight;
+
 @Enumerated(EnumType.STRING)
 private PhotoQuality photoQuality;
+
 public Long getId() {
 	return id;
 }
 public void setId(Long id) {
 	this.id = id;
 }
-public URL getPhotoURL() {
+public String getPhotoURL() {
 	return photoURL;
 }
-public void setPhotoURL(URL photoURL) {
+public void setPhotoURL(String photoURL) {
 	this.photoURL = photoURL;
 }
 public boolean isColorPhoto() {

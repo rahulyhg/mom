@@ -11,7 +11,7 @@ public class Email implements Serializable{
 private String emailID;
 private boolean primary;
 private boolean verified;
-private boolean thisFBID;
+private boolean fBID;
 
 public boolean isVerified() {
 	return verified;
@@ -19,11 +19,23 @@ public boolean isVerified() {
 public void setVerified(boolean verified) {
 	this.verified = verified;
 }
-public boolean isThisFBID() {
-	return thisFBID;
+public String getEmailID() {
+	return emailID;
 }
-public void setThisFBID(boolean thisFBID) {
-	this.thisFBID = thisFBID;
+public void setEmailID(String emailID) {
+	this.emailID = emailID;
+}
+public boolean isPrimary() {
+	return primary;
+}
+public void setPrimary(boolean primary) {
+	this.primary = primary;
+}
+public boolean isfBID() {
+	return fBID;
+}
+public void setfBID(boolean fBID) {
+	this.fBID = fBID;
 }
 
 

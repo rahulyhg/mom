@@ -3,6 +3,8 @@ package com.marriageonmind.model.marriage;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,11 +14,26 @@ public class Qualification implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
+	
+	@Enumerated(EnumType.STRING)
 	private QualificationLevel qualificationLevel;
+	@Enumerated(EnumType.STRING)
 	private QualificationStatus qualificationStatus;
+	
+	@Enumerated(EnumType.STRING)
 	private QualificationName qualificationName;//it should be unique
+	
+	@Enumerated(EnumType.STRING)
 	private QualificationStream stream;
-	private String speciality; /* convent educated etc */
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	private String description; /* convent educated etc */
+	
 	public Long getId() {
 		return id;
 	}
@@ -46,12 +63,6 @@ public class Qualification implements Serializable{
 	}
 	public void setStream(QualificationStream stream) {
 		this.stream = stream;
-	}
-	public String getSpeciality() {
-		return speciality;
-	}
-	public void setSpeciality(String speciality) {
-		this.speciality = speciality;
 	}
 	
 

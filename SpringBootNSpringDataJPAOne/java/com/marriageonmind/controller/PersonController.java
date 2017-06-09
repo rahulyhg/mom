@@ -27,9 +27,9 @@ public class PersonController {
   }
   
   @RequestMapping(value="/create")
-  public String create(Map<String,List>map,String email, String name) {
+  public String create(Map<String,List>map) {
 	    try {
-	      User user = new User(email, name);
+	      User user = new User();
 	      userDao.create(user);
 	    }
 	    catch (Exception ex) {
@@ -47,7 +47,7 @@ public class PersonController {
   
   public String delete(Long id) {
     try {
-      User user = new User(id);
+      User user = new User();
       userDao.delete(user);
     }
     catch (Exception ex) {
@@ -81,7 +81,7 @@ public class PersonController {
   public String updateName(long id, String email, String name) {
     try {
       User user = userDao.getById(id);
-      user.setEmail(email);
+     
       user.setName(name);
       userDao.update(user);
     }

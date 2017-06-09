@@ -2,42 +2,45 @@ package com.marriageonmind.model;
 
 
 import java.io.Serializable;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-
-import com.marriageonmind.model.marriage.Category;
-import com.marriageonmind.model.marriage.Gender;
 
 
 
 @Entity
-@Table(name="USER")
 public class User implements Serializable{
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	@NotNull
-	@Column(name="NAME", nullable=false)
+	@Column( nullable=false)
 	private String name;
+	
 	private String password;
     private String passwordConfirm;
+    
+    @OneToOne
     private Email userId;//only one email id
 
+    @OneToOne
 	private MobileNo mobileNo;//only one mobile no.
-	private Category category;
+	
+	@Enumerated(EnumType.STRING)
+	private Role role;
+	
 	private String firstName;
 	private String lastName;
-	private Gender gender;
-	private Role role;
+	
 	
 	public String getPassword() {
 		return password;
@@ -57,27 +60,9 @@ public class User implements Serializable{
 	public void setPasswordConfirm(String passwordConfirm) {
 		this.passwordConfirm = passwordConfirm;
 	}
-
-
-	
-
-
-	@NotNull
-	  private String email;
-	  
-	  
+  
 	  public User() { }
 
-
-	  public User(Long id) {
-			this.id = id;
-	}
-
-
-	public User(String email, String name) {
-	    this.email = email;
-	    this.name = name;
-	  }
 	
 	public Long getId() {
 		return id;
@@ -95,14 +80,5 @@ public class User implements Serializable{
 		this.name = name;
 	}
 
-
-	public String getEmail() {
-		return email;
-	}
-
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
+	
 }

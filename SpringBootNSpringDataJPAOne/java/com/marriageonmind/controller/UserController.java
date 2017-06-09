@@ -20,7 +20,7 @@ public class UserController {
   @ResponseBody
   public String create(String email, String name) {
     try {
-      User user = new User(email, name);
+      User user = new User();
       userDao.create(user);
     }
     catch (Exception ex) {
@@ -36,7 +36,7 @@ public class UserController {
   @ResponseBody
   public String delete(Long id) {
     try {
-      User user = new User(id);
+      User user = new User();
       userDao.delete(user);
     }
     catch (Exception ex) {
@@ -70,7 +70,7 @@ public class UserController {
   public String updateName(long id, String email, String name) {
     try {
       User user = userDao.getById(id);
-      user.setEmail(email);
+      
       user.setName(name);
       userDao.update(user);
     }

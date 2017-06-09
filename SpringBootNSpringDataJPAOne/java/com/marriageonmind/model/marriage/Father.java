@@ -33,7 +33,7 @@ private Collection<MarriagePerson> MarriagePersons;
 private Profession profession;
 
 @OneToOne
-private Job job;
+private EmploymentStatus job;
 
 private Set<MobileNo> mobileNos;
 
@@ -81,10 +81,10 @@ public Profession getProfession() {
 public void setProfession(Profession profession) {
 	this.profession = profession;
 }
-public Job getJob() {
+public EmploymentStatus getJob() {
 	return job;
 }
-public void setJob(Job job) {
+public void setJob(EmploymentStatus job) {
 	this.job = job;
 }
 

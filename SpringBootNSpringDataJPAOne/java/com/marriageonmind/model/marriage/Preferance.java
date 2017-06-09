@@ -23,7 +23,7 @@ public class Preferance {
 	private boolean working;
 	
 
-	private Job job;
+	private EmploymentStatus job;
 
 	private City city;
 	
