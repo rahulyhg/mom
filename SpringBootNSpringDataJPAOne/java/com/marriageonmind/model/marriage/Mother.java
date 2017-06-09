@@ -1,11 +1,13 @@
 package com.marriageonmind.model.marriage;
 
 import java.io.Serializable;
+import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 @Entity
 public class Mother implements Serializable {
 	@Id
@@ -13,6 +15,16 @@ public class Mother implements Serializable {
 private String fullName;
 private boolean alive;
 private boolean housewife;
+
+@OneToMany(mappedBy="mother")
+private Collection<MarriagePerson> marriagePerson;
+
+public Collection<MarriagePerson> getMarriagePerson() {
+	return marriagePerson;
+}
+public void setMarriagePerson(Collection<MarriagePerson> marriagePerson) {
+	this.marriagePerson = marriagePerson;
+}
 public String getFullName() {
 	return fullName;
 }

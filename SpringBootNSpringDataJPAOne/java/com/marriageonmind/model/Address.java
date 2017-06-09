@@ -2,15 +2,46 @@ package com.marriageonmind.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
-@Embeddable
+@Entity
 public class Address implements Serializable{
-@Embedded	
+@Id
+@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+
+@Enumerated(EnumType.STRING)
+private AddressType addressType;
+
+@OneToOne
 private City city;
-@Embedded
-private Country country;
+
+private String description;
+
+public Long getId() {
+	return id;
+}
+public void setId(Long id) {
+	this.id = id;
+}
+public AddressType getAddressType() {
+	return addressType;
+}
+public void setAddressType(AddressType addressType) {
+	this.addressType = addressType;
+}
+public String getDescription() {
+	return description;
+}
+public void setDescription(String description) {
+	this.description = description;
+}
 private String houseNo;
 private String streetName;
 private String locality;
@@ -24,12 +55,7 @@ public City getCity() {
 public void setCity(City city) {
 	this.city = city;
 }
-public Country getCountry() {
-	return country;
-}
-public void setCountry(Country country) {
-	this.country = country;
-}
+
 public String getHouseNo() {
 	return houseNo;
 }

@@ -1,6 +1,7 @@
 package com.marriageonmind.model.marriage;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,10 +17,16 @@ public class Profile implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private Long profileID;
 private ProfileStatus profileStatus;
-private PrintSpace printSpace;
-private PaymentStatus paymentStatus;
-private boolean tobePublishedInMagazine;
+
 private boolean complete;
+private Date profileCreationDate;
+
+public Date getProfileCreationDate() {
+	return profileCreationDate;
+}
+public void setProfileCreationDate(Date profileCreationDate) {
+	this.profileCreationDate = profileCreationDate;
+}
 public Long getProfileID() {
 	return profileID;
 }
@@ -32,24 +39,7 @@ public ProfileStatus getProfileStatus() {
 public void setProfileStatus(ProfileStatus profileStatus) {
 	this.profileStatus = profileStatus;
 }
-public PrintSpace getPrintSpace() {
-	return printSpace;
-}
-public void setPrintSpace(PrintSpace printSpace) {
-	this.printSpace = printSpace;
-}
-public PaymentStatus getPaymentStatus() {
-	return paymentStatus;
-}
-public void setPaymentStatus(PaymentStatus paymentStatus) {
-	this.paymentStatus = paymentStatus;
-}
-public boolean isTobePublishedInMagazine() {
-	return tobePublishedInMagazine;
-}
-public void setTobePublishedInMagazine(boolean tobePublishedInMagazine) {
-	this.tobePublishedInMagazine = tobePublishedInMagazine;
-}
+
 public boolean isComplete() {
 	return complete;
 }

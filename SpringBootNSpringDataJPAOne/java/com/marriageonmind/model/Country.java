@@ -1,20 +1,32 @@
 package com.marriageonmind.model;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.util.Collection;
 
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@Embeddable
+@Entity
 public class Country implements Serializable{
-	
-private Set<City> cities;
 
-public Set<City> getCities() {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+private Collection<City> cities;
+public Long getId() {
+	return id;
+}
+public void setId(Long id) {
+	this.id = id;
+}
+public Collection<City> getCities() {
 	return cities;
 }
-public void setCities(Set<City> cities) {
+public void setCities(Collection<City> cities) {
 	this.cities = cities;
 }
+
 
 }

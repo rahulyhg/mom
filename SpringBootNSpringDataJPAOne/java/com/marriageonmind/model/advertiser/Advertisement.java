@@ -2,6 +2,7 @@ package com.marriageonmind.model.advertiser;
 
 import java.io.Serializable;
 import java.net.URL;
+import java.util.Collection;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -20,14 +21,17 @@ public class Advertisement implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private Long id;
+
 private Address address;
-private Set<MobileNo> mobileNo;
+private Collection<MobileNo> mobileNo;
 private Email emailID;
+
 private PrintSpace printSpace;
 private PaymentStatus paymentStatus;
 
 private URL photoURL;
 private URL website;
+
 public Long getId() {
 	return id;
 }
@@ -39,12 +43,6 @@ public Address getAddress() {
 }
 public void setAddress(Address address) {
 	this.address = address;
-}
-public Set<MobileNo> getMobileNo() {
-	return mobileNo;
-}
-public void setMobileNo(Set<MobileNo> mobileNo) {
-	this.mobileNo = mobileNo;
 }
 public Email getEmailID() {
 	return emailID;

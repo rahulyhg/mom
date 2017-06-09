@@ -11,15 +11,12 @@ import javax.persistence.Id;
 public class LandLineNo implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+/*
+ * combination of number and std code have to form PK
+ */
 	private String number;
 	private String STDCode;
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+
 	public String getNumber() {
 		return number;
 	}

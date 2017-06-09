@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Brother implements Serializable{
@@ -13,36 +14,25 @@ public class Brother implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
-private String fullName;
-private boolean married;
-private String wifeName;
+private String name;
+
+@OneToOne
 private Profession profession;
+
 private String professionDescription;
+
+@OneToOne
 private Qualification qualification;
+
 public Long getId() {
 	return id;
 }
 public void setId(Long id) {
 	this.id = id;
 }
-public String getFullName() {
-	return fullName;
-}
-public void setFullName(String fullName) {
-	this.fullName = fullName;
-}
-public boolean isMarried() {
-	return married;
-}
-public void setMarried(boolean married) {
-	this.married = married;
-}
-public String getWifeName() {
-	return wifeName;
-}
-public void setWifeName(String wifeName) {
-	this.wifeName = wifeName;
-}
+
+
+
 public Profession getProfession() {
 	return profession;
 }
@@ -60,6 +50,12 @@ public Qualification getQualification() {
 }
 public void setQualification(Qualification qualification) {
 	this.qualification = qualification;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
 }
 
 

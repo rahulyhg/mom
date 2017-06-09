@@ -1,46 +1,55 @@
 package com.marriageonmind.model.marriage;
 
-import java.io.Serializable;
-import java.util.Set;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.OneToOne;
 
 import com.marriageonmind.model.City;
 
-@Entity
-public class Preferance implements Serializable {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+/*
+ * This class is intentionally made entity as we do not want to persist it
+ * 
+ */
+		
+public class Preferance {
+	
 	private Long id;
-	private Set<Profession> profession;
+	
+
+	private Profession profession;
+	
+	
 	private ManglikStatus manglikStatus;
 	private boolean working;
-	private Set<Job> jobs;
-	private Set<City>cities;
+	
+
+	private Job job;
+
+	private City city;
+	
 	private int startHeightInCm;
 	private int endHeightInCm;
 	private double startSalary;
 	private double endSalary;
 	private int startAge;
 	private int endAge;
+	
+	
 	private MaritalStatus maritalStatus;
+	
+
 	private FoodHabit foodHabit;
+	
+	
 	private Complexion complexion;
+	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Set<Profession> getProfession() {
-		return profession;
-	}
-	public void setProfession(Set<Profession> profession) {
-		this.profession = profession;
-	}
+	
 	public ManglikStatus getManglikStatus() {
 		return manglikStatus;
 	}
@@ -52,18 +61,6 @@ public class Preferance implements Serializable {
 	}
 	public void setWorking(boolean working) {
 		this.working = working;
-	}
-	public Set<Job> getJobs() {
-		return jobs;
-	}
-	public void setJobs(Set<Job> jobs) {
-		this.jobs = jobs;
-	}
-	public Set<City> getCities() {
-		return cities;
-	}
-	public void setCities(Set<City> cities) {
-		this.cities = cities;
 	}
 	public int getStartHeightInCm() {
 		return startHeightInCm;

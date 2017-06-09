@@ -4,11 +4,11 @@ import java.io.Serializable;
 import java.net.URL;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import com.marriageonmind.model.marriage.Job;
 
 @Entity
 public class Photo implements Serializable{
@@ -22,6 +22,7 @@ private boolean verified;
 private int photoSize;
 private int photoWidth;
 private int photoHeight;
+@Enumerated(EnumType.STRING)
 private PhotoQuality photoQuality;
 public Long getId() {
 	return id;

@@ -2,16 +2,17 @@ package com.marriageonmind.model.marriage;
 
 import java.io.Serializable;
 import java.net.URL;
+import java.util.Collection;
 import java.util.Date;
-import java.util.Set;
 
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import com.marriageonmind.model.Address;
 import com.marriageonmind.model.Email;
@@ -19,49 +20,116 @@ import com.marriageonmind.model.LandLineNo;
 import com.marriageonmind.model.MobileNo;
 
 @Entity
-public class Bride implements Serializable{
+public class MarriagePerson implements Serializable{
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	private String firstName;
+	private String middleName;
 	private String lastName;
-private int heightFeet; //apply constraint
-private int heightInch; //apply constraint
-private int heightInCm;
+	private int heightFeet; //apply constraint
+	private int heightInch; //apply constraint
+	private int heightInCm;
+	
+	@Enumerated(EnumType.STRING)
+	private MarriagePersonType marriagePersonType;
+	
+	@Enumerated(EnumType.STRING)
+	private JobStatus jobStatus;
 
-@Enumerated(EnumType.STRING)
-private JobStatus jobStatus;
+	@ManyToOne
+	private Father father;
+	@ManyToOne
+	private Mother mother;
 
-@Embedded
-private Father father;
-@Embedded
-private Mother mother;
+	private String alsoQualifiedIn;
+	
+	@OneToOne
+	private Relative relative;
 
-private String alsoQualifiedIn;
-private Set<Relative> relatives;
+	@Enumerated(EnumType.STRING)
+	private Complexion complexion;
+	
+	private Date dateOfBirth; //apply constraint //verify through adharid
+	
+	private Collection<MobileNo> mobileNos;// apply constraint
+	
+	@OneToOne
+	private LandLineNo landLineNumber;
+	
+	@Enumerated(EnumType.STRING)
+	private Profession profession;
 
-@Enumerated(EnumType.STRING)
-private Complexion complexion;
-private Date dateOfBirth; //apply constraint //verify through adharid
-private Set<MobileNo> mobileNos;// apply constraint
-private LandLineNo landLineNumber;
-private Profession profession;
+	@OneToOne
+	private Email emailId;//only one emailID
+	
+	private Collection<URL> photo;//
+	private URL video;//youtube Video URL
+	
+	private String AdharID;//apply constraint
+	
+	@Enumerated(EnumType.STRING)
+	private ManglikStatus manglikStatus;
+	
+	@Enumerated(EnumType.STRING)
+	private MaritalStatus maritalStatus;
 
-private Email emailId;//only one emailID
-private Set<URL> photo;//
-private URL video;//youtube Video URL
-private String AdharID;//apply constraint
-private ManglikStatus manglikStatus;
-private MaritalStatus maritalStatus;
+	@OneToOne
+	private Job job;
 
-private Job job;
+	private Collection<Brother> brothers;
+	private Collection<Sister> sisters;
+	
+	private Collection<Address> address;
+	
 
-private Set<Brother> brothers;
-private Set<Sister> sisters;
+	public MarriagePersonType getMarriagePersonType() {
+		return marriagePersonType;
+	}
+	public void setMarriagePersonType(MarriagePersonType marriagePersonType) {
+		this.marriagePersonType = marriagePersonType;
+	}
 
-private Address currentAddress;
-private Address permanentAddress;
+	public Collection<MobileNo> getMobileNos() {
+		return mobileNos;
+	}
+	public void setMobileNos(Collection<MobileNo> mobileNos) {
+		this.mobileNos = mobileNos;
+	}
+	public Collection<URL> getPhoto() {
+		return photo;
+	}
+	public void setPhoto(Collection<URL> photo) {
+		this.photo = photo;
+	}
+	public Collection<Brother> getBrothers() {
+		return brothers;
+	}
+	public void setBrothers(Collection<Brother> brothers) {
+		this.brothers = brothers;
+	}
+	public Collection<Sister> getSisters() {
+		return sisters;
+	}
+	public void setSisters(Collection<Sister> sisters) {
+		this.sisters = sisters;
+	}
+	public Collection<Address> getAddress() {
+		return address;
+	}
+	public void setAddress(Collection<Address> address) {
+		this.address = address;
+	}
+
+	
+	
+public String getMiddleName() {
+	return middleName;
+}
+public void setMiddleName(String middleName) {
+	this.middleName = middleName;
+}
 public Long getId() {
 	return id;
 }
@@ -122,12 +190,7 @@ public String getAlsoQualifiedIn() {
 public void setAlsoQualifiedIn(String alsoQualifiedIn) {
 	this.alsoQualifiedIn = alsoQualifiedIn;
 }
-public Set<Relative> getRelatives() {
-	return relatives;
-}
-public void setRelatives(Set<Relative> relatives) {
-	this.relatives = relatives;
-}
+
 public Complexion getComplexion() {
 	return complexion;
 }
@@ -140,12 +203,7 @@ public Date getDateOfBirth() {
 public void setDateOfBirth(Date dateOfBirth) {
 	this.dateOfBirth = dateOfBirth;
 }
-public Set<MobileNo> getMobileNos() {
-	return mobileNos;
-}
-public void setMobileNos(Set<MobileNo> mobileNos) {
-	this.mobileNos = mobileNos;
-}
+
 public LandLineNo getLandLineNumber() {
 	return landLineNumber;
 }
@@ -164,12 +222,7 @@ public Email getEmailId() {
 public void setEmailId(Email emailId) {
 	this.emailId = emailId;
 }
-public Set<URL> getPhoto() {
-	return photo;
-}
-public void setPhoto(Set<URL> photo) {
-	this.photo = photo;
-}
+
 public URL getVideo() {
 	return video;
 }
@@ -200,29 +253,6 @@ public Job getJob() {
 public void setJob(Job job) {
 	this.job = job;
 }
-public Set<Brother> getBrothers() {
-	return brothers;
-}
-public void setBrothers(Set<Brother> brothers) {
-	this.brothers = brothers;
-}
-public Set<Sister> getSisters() {
-	return sisters;
-}
-public void setSisters(Set<Sister> sisters) {
-	this.sisters = sisters;
-}
-public Address getCurrentAddress() {
-	return currentAddress;
-}
-public void setCurrentAddress(Address currentAddress) {
-	this.currentAddress = currentAddress;
-}
-public Address getPermanentAddress() {
-	return permanentAddress;
-}
-public void setPermanentAddress(Address permanentAddress) {
-	this.permanentAddress = permanentAddress;
-}
+
 
 }
