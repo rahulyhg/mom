@@ -36,8 +36,8 @@ public class MarriagePerson implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private MarriagePersonType marriagePersonType;
 	
-	@Enumerated(EnumType.STRING)
-	private JobStatus jobStatus;
+	@OneToOne
+	private EmploymentStatus employementStatus;
 
 	@ManyToOne
 	private Father father;
@@ -175,12 +175,7 @@ public int getHeightInCm() {
 public void setHeightInCm(int heightInCm) {
 	this.heightInCm = heightInCm;
 }
-public JobStatus getJobStatus() {
-	return jobStatus;
-}
-public void setJobStatus(JobStatus jobStatus) {
-	this.jobStatus = jobStatus;
-}
+
 public Father getFather() {
 	return father;
 }
