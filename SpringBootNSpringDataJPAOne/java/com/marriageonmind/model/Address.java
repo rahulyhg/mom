@@ -24,6 +24,16 @@ private City city;
 
 private String description;
 
+
+private String houseNo;
+private String streetName;
+private String locality;
+private String near;
+private String landmark;
+private String pincode;
+
+
+
 public Long getId() {
 	return id;
 }
@@ -42,13 +52,6 @@ public String getDescription() {
 public void setDescription(String description) {
 	this.description = description;
 }
-private String houseNo;
-private String streetName;
-private String locality;
-private String near;
-private String landmark;
-private String pincode;
-
 public City getCity() {
 	return city;
 }

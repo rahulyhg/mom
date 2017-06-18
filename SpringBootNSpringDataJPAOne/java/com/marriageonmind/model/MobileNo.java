@@ -8,10 +8,11 @@ import javax.persistence.Id;
 @Entity
 public class MobileNo implements Serializable{
 @Id	
-private String mobileNo;
+private String mobileNo;// must be exact 10 digit regex must be used
 private boolean verified;
 private boolean whatsAppNo;
 private boolean thisFBID;
+
 public String getMobileNo() {
 	return mobileNo;
 }

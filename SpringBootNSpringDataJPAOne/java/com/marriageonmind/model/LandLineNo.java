@@ -6,7 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+/*
+ * here the combination of std code and number should be unique
+ */
 @Entity
 public class LandLineNo implements Serializable{
 	@Id

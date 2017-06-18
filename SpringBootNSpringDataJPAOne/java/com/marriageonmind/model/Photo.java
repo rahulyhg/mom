@@ -10,13 +10,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/*
+ * there should 
+ */
 @Entity
 public class Photo implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 private Long id;
 
-	
 private String photoURL;
 private boolean colorPhoto;
 private boolean verified;

@@ -3,12 +3,15 @@ package com.marriageonmind.model.advertiser;
 import java.io.Serializable;
 import java.net.URL;
 import java.util.Collection;
-import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import com.marriageonmind.model.Address;
 import com.marriageonmind.model.Email;
@@ -22,15 +25,20 @@ public class Advertisement implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private Long id;
 
+	@OneToMany
 private Address address;
+	@OneToMany
 private Collection<MobileNo> mobileNo;
+@OneToOne
 private Email emailID;
 
+@Enumerated(EnumType.STRING)
 private PrintSpace printSpace;
+@Enumerated(EnumType.STRING)
 private PaymentStatus paymentStatus;
 
-private URL photoURL;
-private URL website;
+private String photoURL;
+private String website;
 
 public Long getId() {
 	return id;
@@ -62,18 +70,7 @@ public PaymentStatus getPaymentStatus() {
 public void setPaymentStatus(PaymentStatus paymentStatus) {
 	this.paymentStatus = paymentStatus;
 }
-public URL getPhotoURL() {
-	return photoURL;
-}
-public void setPhotoURL(URL photoURL) {
-	this.photoURL = photoURL;
-}
-public URL getWebsite() {
-	return website;
-}
-public void setWebsite(URL website) {
-	this.website = website;
-}
+
 
 
 }

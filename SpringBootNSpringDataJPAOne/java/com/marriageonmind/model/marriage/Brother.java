@@ -2,14 +2,22 @@ package com.marriageonmind.model.marriage;
 
 import java.io.Serializable;
 
+import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+
+
+
 @Entity
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="BROTHER_TYPE")
 public class Brother implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -20,10 +28,8 @@ private String name;
 @ManyToOne
 private MarriagePerson  marriagePerson;
 
-@OneToOne
-private Profession profession;
 
-private String professionDescription;
+
 
 @OneToOne
 private Qualification qualification;
@@ -37,18 +43,7 @@ public void setId(Long id) {
 
 
 
-public Profession getProfession() {
-	return profession;
-}
-public void setProfession(Profession profession) {
-	this.profession = profession;
-}
-public String getProfessionDescription() {
-	return professionDescription;
-}
-public void setProfessionDescription(String professionDescription) {
-	this.professionDescription = professionDescription;
-}
+
 public Qualification getQualification() {
 	return qualification;
 }

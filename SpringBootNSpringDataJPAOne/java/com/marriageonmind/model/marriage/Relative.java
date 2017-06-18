@@ -25,8 +25,7 @@ private String firstName;
 private String middleName;
 private String lastName;
 
-@Enumerated(EnumType.STRING)
-private Profession occupation;
+
 @Enumerated(EnumType.STRING)
 private Gender gender;
 
@@ -58,12 +57,7 @@ public void setMiddleName(String middleName) {
 }
 
 
-public Profession getOccupation() {
-	return occupation;
-}
-public void setOccupation(Profession occupation) {
-	this.occupation = occupation;
-}
+
 public Gender getGender() {
 	return gender;
 }

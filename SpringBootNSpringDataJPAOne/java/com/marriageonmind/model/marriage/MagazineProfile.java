@@ -16,6 +16,7 @@ public class MagazineProfile extends Profile {
 	private PrintSpace printSpace;
 	@Enumerated(EnumType.STRING)
 	private PaymentStatus paymentStatus;
+	
 	public Long getId() {
 		return id;
 	}

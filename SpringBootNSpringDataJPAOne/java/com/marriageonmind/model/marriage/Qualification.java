@@ -16,15 +16,19 @@ public class Qualification implements Serializable{
 	private Long id;
 	
 	@Enumerated(EnumType.STRING)
-	private QualificationLevel qualificationLevel;
-	@Enumerated(EnumType.STRING)
 	private QualificationStatus qualificationStatus;
+	
+	
+	@Enumerated(EnumType.STRING)
+	private QualificationLevel qualificationLevel;
+	
+	@Enumerated(EnumType.STRING)
+	private QualificationStream stream;
 	
 	@Enumerated(EnumType.STRING)
 	private QualificationName qualificationName;//it should be unique
 	
-	@Enumerated(EnumType.STRING)
-	private QualificationStream stream;
+	
 	
 	public String getDescription() {
 		return description;

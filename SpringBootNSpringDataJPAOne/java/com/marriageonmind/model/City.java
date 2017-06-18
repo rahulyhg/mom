@@ -8,7 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-
+/*
+ * here the combination of city name and country name must be unique as 
+ * patna is in india as well as in sweden
+ */
 @Entity
 public class City implements Serializable {
 	@Id

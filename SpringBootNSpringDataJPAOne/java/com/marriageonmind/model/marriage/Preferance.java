@@ -16,14 +16,14 @@ public class Preferance {
 	private Long id;
 	
 
-	private Profession profession;
+	
 	
 	
 	private ManglikStatus manglikStatus;
 	private boolean working;
 	
 
-	private EmploymentStatus job;
+	private EmployeeMarriagePerson job;
 
 	private City city;
 	

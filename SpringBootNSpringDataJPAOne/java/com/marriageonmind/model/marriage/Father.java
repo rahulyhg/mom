@@ -29,13 +29,12 @@ private boolean alive;
 @OneToMany(mappedBy="father")
 private Collection<MarriagePerson> MarriagePersons;
 
-@Enumerated(EnumType.STRING)
-private Profession profession;
 
 @OneToOne
-private EmploymentStatus job;
+private EmployeeMarriagePerson job;
 
-private Set<MobileNo> mobileNos;
+@OneToMany
+private Collection<MobileNo> mobileNos;
 
 public Long getId() {
 	return id;
@@ -63,9 +62,7 @@ public void setLastName(String lastName) {
 	this.lastName = lastName;
 }
 
-public Set<MobileNo> getMobileNos() {
-	return mobileNos;
-}
+
 public void setMobileNos(Set<MobileNo> mobileNos) {
 	this.mobileNos = mobileNos;
 }
@@ -75,17 +72,24 @@ public boolean isAlive() {
 public void setAlive(boolean alive) {
 	this.alive = alive;
 }
-public Profession getProfession() {
-	return profession;
-}
-public void setProfession(Profession profession) {
-	this.profession = profession;
-}
-public EmploymentStatus getJob() {
+
+public EmployeeMarriagePerson getJob() {
 	return job;
 }
-public void setJob(EmploymentStatus job) {
+public void setJob(EmployeeMarriagePerson job) {
 	this.job = job;
+}
+public Collection<MarriagePerson> getMarriagePersons() {
+	return MarriagePersons;
+}
+public void setMarriagePersons(Collection<MarriagePerson> marriagePersons) {
+	MarriagePersons = marriagePersons;
+}
+public Collection<MobileNo> getMobileNos() {
+	return mobileNos;
+}
+public void setMobileNos(Collection<MobileNo> mobileNos) {
+	this.mobileNos = mobileNos;
 }
 
 }

@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Item implements Serializable{
@@ -13,6 +14,16 @@ public class Item implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private Long id;
 private String name;
+
+@ManyToOne
+private Shop shop;
+
+public Shop getShop() {
+	return shop;
+}
+public void setShop(Shop shop) {
+	this.shop = shop;
+}
 public Long getId() {
 	return id;
 }

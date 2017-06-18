@@ -14,6 +14,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.marriageonmind.model.Address;
 import com.marriageonmind.model.Email;
@@ -29,15 +31,14 @@ public class MarriagePerson implements Serializable{
 	private String firstName;
 	private String middleName;
 	private String lastName;
-	private int heightFeet; //apply constraint
+	private int heightFeet; //apply  constraint
 	private int heightInch; //apply constraint
 	private int heightInCm;
 	
 	@Enumerated(EnumType.STRING)
 	private MarriagePersonType marriagePersonType;
-	
-	@OneToOne
-	private EmploymentStatus employementStatus;
+
+
 
 	@ManyToOne
 	private Father father;
@@ -52,7 +53,24 @@ public class MarriagePerson implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private Complexion complexion;
 	
+	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth; //apply constraint //verify through adharid
+	
+	private String birthTime;
+		
+	
+	public Relative getRelative() {
+		return relative;
+	}
+	public void setRelative(Relative relative) {
+		this.relative = relative;
+	}
+	public String getBirthTime() {
+		return birthTime;
+	}
+	public void setBirthTime(String birthTime) {
+		this.birthTime = birthTime;
+	}
 	
 	@OneToMany
 	private Collection<MobileNo> mobileNos;// apply constraint
@@ -60,14 +78,11 @@ public class MarriagePerson implements Serializable{
 	@OneToOne
 	private LandLineNo landLineNumber;
 	
-	@Enumerated(EnumType.STRING)
-	private Profession profession;
-
 	@OneToOne
 	private Email emailId;//only one emailID
 	
 	@OneToMany
-	private Collection<URL> photo;//
+	private Collection<String> photo;//
 	
 	
 	private String video;//youtube Video URL
@@ -81,7 +96,7 @@ public class MarriagePerson implements Serializable{
 	private MaritalStatus maritalStatus;
 
 	@OneToOne
-	private EmploymentStatus job;
+	private EmployeeMarriagePerson job;
 
 	@OneToMany(mappedBy="marriagePerson")
 	private Collection<Brother> brothers;
@@ -106,12 +121,7 @@ public class MarriagePerson implements Serializable{
 	public void setMobileNos(Collection<MobileNo> mobileNos) {
 		this.mobileNos = mobileNos;
 	}
-	public Collection<URL> getPhoto() {
-		return photo;
-	}
-	public void setPhoto(Collection<URL> photo) {
-		this.photo = photo;
-	}
+	
 	public Collection<Brother> getBrothers() {
 		return brothers;
 	}
@@ -214,12 +224,7 @@ public LandLineNo getLandLineNumber() {
 public void setLandLineNumber(LandLineNo landLineNumber) {
 	this.landLineNumber = landLineNumber;
 }
-public Profession getProfession() {
-	return profession;
-}
-public void setProfession(Profession profession) {
-	this.profession = profession;
-}
+
 public Email getEmailId() {
 	return emailId;
 }
@@ -251,10 +256,10 @@ public MaritalStatus getMaritalStatus() {
 public void setMaritalStatus(MaritalStatus maritalStatus) {
 	this.maritalStatus = maritalStatus;
 }
-public EmploymentStatus getJob() {
+public EmployeeMarriagePerson getJob() {
 	return job;
 }
-public void setJob(EmploymentStatus job) {
+public void setJob(EmployeeMarriagePerson job) {
 	this.job = job;
 }
 
