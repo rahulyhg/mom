@@ -24,7 +24,10 @@ public class User implements Serializable{
 
 	@NotNull
 	@Column( nullable=false)
-	private String name;
+	private String firstName;
+	
+	private String lastName;
+	
 	
 	private String password;
     private String passwordConfirm;
@@ -38,8 +41,6 @@ public class User implements Serializable{
 	@Enumerated(EnumType.STRING)
 	private Role role;
 	
-	private String firstName;
-	private String lastName;
 	
 	
 	public String getPassword() {
@@ -72,13 +73,4 @@ public class User implements Serializable{
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	
 }

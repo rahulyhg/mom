@@ -26,8 +26,13 @@ private int photoSize;
 private int photoWidth;
 private int photoHeight;
 
-@Enumerated(EnumType.STRING)
-private PhotoQuality photoQuality;
+public boolean isGoodQuality() {
+	return goodQuality;
+}
+public void setGoodQuality(boolean goodQuality) {
+	this.goodQuality = goodQuality;
+}
+private boolean goodQuality;
 
 public Long getId() {
 	return id;
@@ -70,12 +75,6 @@ public int getPhotoHeight() {
 }
 public void setPhotoHeight(int photoHeight) {
 	this.photoHeight = photoHeight;
-}
-public PhotoQuality getPhotoQuality() {
-	return photoQuality;
-}
-public void setPhotoQuality(PhotoQuality photoQuality) {
-	this.photoQuality = photoQuality;
 }
 
 

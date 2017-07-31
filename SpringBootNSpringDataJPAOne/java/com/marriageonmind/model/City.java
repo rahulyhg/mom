@@ -2,24 +2,17 @@ package com.marriageonmind.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
 
-/*
- * here the combination of city name and country name must be unique as 
- * patna is in india as well as in sweden
- */
-@Entity
+
+@Embeddable
 public class City implements Serializable {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+	
 	
 	private String name;
-	@ManyToOne
+	
+	@Embedded
 	private Country country;
 	
 	public String getName() {
