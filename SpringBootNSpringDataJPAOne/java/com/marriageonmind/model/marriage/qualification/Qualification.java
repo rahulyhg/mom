@@ -1,7 +1,6 @@
 package com.marriageonmind.model.marriage.qualification;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -40,6 +39,7 @@ public class Qualification implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date endDate; //can't be before startdate
 	
+	@Enumerated(EnumType.STRING)
 	private QualificationLevel qualificationLevel; 
 	// should be automatically selected based on the degree selected  
 	
@@ -83,6 +83,38 @@ public class Qualification implements Serializable{
 	}
 	public void setQualificationLevel(QualificationLevel qualificationLevel) {
 		this.qualificationLevel = qualificationLevel;
+	}
+
+	public String getDegreeName() {
+		return degreeName;
+	}
+
+	public void setDegreeName(String degreeName) {
+		this.degreeName = degreeName;
+	}
+
+	public String getMajorSubject() {
+		return majorSubject;
+	}
+
+	public void setMajorSubject(String majorSubject) {
+		this.majorSubject = majorSubject;
+	}
+
+	public String getCollege() {
+		return college;
+	}
+
+	public void setCollege(String college) {
+		this.college = college;
+	}
+
+	public String getUniversity() {
+		return university;
+	}
+
+	public void setUniversity(String university) {
+		this.university = university;
 	}
 		
 

@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @Configuration
 @EnableScheduling
-@ComponentScan({ "org.baeldung.task" })
+@ComponentScan({ "com.marriageonmind.task" })
 public class SpringTaskConfig {
 
 }

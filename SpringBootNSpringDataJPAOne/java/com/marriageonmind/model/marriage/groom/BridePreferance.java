@@ -1,7 +1,11 @@
 package com.marriageonmind.model.marriage.groom;
 
+import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 import com.marriageonmind.model.City;
@@ -9,25 +13,25 @@ import com.marriageonmind.model.marriage.common.FoodHabit;
 import com.marriageonmind.model.marriage.common.ManglikStatus;
 import com.marriageonmind.model.marriage.occupation.Employee;
 
-/*
- * This class is intentionally made entity as we do not want to persist it
- * 
- */
-		
+
+@Entity		
 public class BridePreferance {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
 
+	@OneToOne
+	private Groom groom;
 	
-	
-	
+	@Enumerated(EnumType.STRING)
 	private ManglikStatus manglikStatus;
 	private boolean working;
 	
-
+	@OneToOne
 	private Employee job;
 
+	@OneToOne
 	private City city;
 	
 	private int startHeightInCm;
@@ -36,13 +40,9 @@ public class BridePreferance {
 	private double endSalary;
 	private int startAge;
 	private int endAge;
-	
-	
-	
-	
-
+		
+@Enumerated(EnumType.STRING)
 	private FoodHabit foodHabit;
-	
 	
 
 	

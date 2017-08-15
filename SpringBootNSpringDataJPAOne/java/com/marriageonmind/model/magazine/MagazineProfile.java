@@ -1,15 +1,17 @@
 package com.marriageonmind.model.magazine;
 
-import java.util.Set;
+import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 
 @Entity
-public class MagazineProfile {
+public class MagazineProfile implements Serializable{
 	@Id
 	private Long id;
 	@Enumerated(EnumType.STRING)
@@ -17,15 +19,11 @@ public class MagazineProfile {
 	@Enumerated(EnumType.STRING)
 	private PaymentStatus paymentStatus;
 	
-	@OneToMany
-	private Set<MagazinePayment> magazinePayments;
+	@OneToMany(mappedBy="magazineProfile")
+	@OrderBy("paymentDate")
+	private List<MagazinePayment> magazinePayments;
 	
-	public Set<MagazinePayment> getMagazinePayments() {
-		return magazinePayments;
-	}
-	public void setMagazinePayments(Set<MagazinePayment> magazinePayments) {
-		this.magazinePayments = magazinePayments;
-	}
+
 	public Long getId() {
 		return id;
 	}

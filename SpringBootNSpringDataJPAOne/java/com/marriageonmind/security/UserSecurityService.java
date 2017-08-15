@@ -12,9 +12,9 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import com.marriageonmind.persistence.dao.PasswordResetTokenRepository;
 import com.marriageonmind.persistence.model.PasswordResetToken;
 import com.marriageonmind.persistence.model.User;
-import com.marriageonmind.repository.PasswordResetTokenRepository;
 
 @Service
 @Transactional

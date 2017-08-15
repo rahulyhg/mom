@@ -20,6 +20,7 @@ public class VerificationToken {
     @JoinColumn(nullable = false, name = "user_id", foreignKey = @ForeignKey(name = "FK_VERIFY_USER"))
     private User user;
 
+    @Temporal(TemporalType.DATE)
     private Date expiryDate;
 
     public VerificationToken() {

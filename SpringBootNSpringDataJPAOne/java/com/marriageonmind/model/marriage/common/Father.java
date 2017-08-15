@@ -29,10 +29,6 @@ private boolean alive;
 
 
 
-
-@OneToOne
-private Employee job;
-
 @OneToMany
 private Collection<MobileNo> mobileNos;
 
@@ -73,12 +69,6 @@ public void setAlive(boolean alive) {
 	this.alive = alive;
 }
 
-public Employee getJob() {
-	return job;
-}
-public void setJob(Employee job) {
-	this.job = job;
-}
 
 public Collection<MobileNo> getMobileNos() {
 	return mobileNos;

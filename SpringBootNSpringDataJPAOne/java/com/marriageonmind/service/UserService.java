@@ -18,13 +18,13 @@ import org.springframework.security.core.session.SessionRegistry;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.marriageonmind.persistence.dao.PasswordResetTokenRepository;
+import com.marriageonmind.persistence.dao.RoleRepository;
+import com.marriageonmind.persistence.dao.UserRepository;
+import com.marriageonmind.persistence.dao.VerificationTokenRepository;
 import com.marriageonmind.persistence.model.PasswordResetToken;
 import com.marriageonmind.persistence.model.User;
 import com.marriageonmind.persistence.model.VerificationToken;
-import com.marriageonmind.repository.PasswordResetTokenRepository;
-import com.marriageonmind.repository.RoleRepository;
-import com.marriageonmind.repository.UserRepository;
-import com.marriageonmind.repository.VerificationTokenRepository;
 import com.marriageonmind.web.dto.UserDto;
 import com.marriageonmind.web.error.UserAlreadyExistException;
 

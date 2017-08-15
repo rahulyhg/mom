@@ -13,6 +13,7 @@ public class MarriedBrother extends Brother {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	private String wifeName;
+	
 	public Long getId() {
 		return id;
 	}

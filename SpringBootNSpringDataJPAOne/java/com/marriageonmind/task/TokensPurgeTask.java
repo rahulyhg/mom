@@ -8,8 +8,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.marriageonmind.repository.PasswordResetTokenRepository;
-import com.marriageonmind.repository.VerificationTokenRepository;
+import com.marriageonmind.persistence.dao.PasswordResetTokenRepository;
+import com.marriageonmind.persistence.dao.VerificationTokenRepository;
 
 @Service
 @Transactional

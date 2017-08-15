@@ -3,20 +3,17 @@ package com.marriageonmind.model.marriage.common;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Inheritance
-@DiscriminatorColumn(name="PROFILE_TYPE")
 public class WebProfile implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -30,6 +27,16 @@ private boolean complete;
 @Temporal(TemporalType.DATE)
 private Date profileCreationDate;
 
+@OneToOne
+private MarriageSeeker marriageSeeker;
+
+
+public MarriageSeeker getMarriageSeeker() {
+	return marriageSeeker;
+}
+public void setMarriageSeeker(MarriageSeeker marriageSeeker) {
+	this.marriageSeeker = marriageSeeker;
+}
 public Date getProfileCreationDate() {
 	return profileCreationDate;
 }
@@ -55,9 +62,6 @@ public boolean isComplete() {
 public void setComplete(boolean complete) {
 	this.complete = complete;
 }
-
-
-
 
  
 }

@@ -8,15 +8,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 /*
  * here the combination of std code and number should be unique
+ * combination of number and std code have to form PK
  */
+ 
 @Entity
 public class LandLineNo implements Serializable{
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-/*
- * combination of number and std code have to form PK
- */
 	private String number;
+	@Id
 	private String STDCode;
 
 	public String getNumber() {

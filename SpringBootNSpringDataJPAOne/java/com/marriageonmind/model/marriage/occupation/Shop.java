@@ -1,20 +1,14 @@
 package com.marriageonmind.model.marriage.occupation;
 
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.Set;
 
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-
-import com.marriageonmind.model.Photo;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Shop implements Serializable{
@@ -22,6 +16,8 @@ public class Shop implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
+	@ManyToOne
+	private ShopOwner shopOwner;
 	
 	private String shopName;
 	
@@ -29,10 +25,6 @@ public class Shop implements Serializable{
 	private ShopCategory shopCategory;
 	
 
-	
-
-	
-	
 	public Long getId() {
 		return id;
 	}

@@ -14,7 +14,7 @@ import com.marriageonmind.model.Email;
 import com.marriageonmind.model.MobileNo;
 
 @Entity
-public class Relative implements Serializable{
+public class Guardian implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
@@ -23,6 +23,7 @@ private String firstName;
 private String middleName;
 private String lastName;
 
+private String relationName;
 
 @OneToMany
 private Collection<MobileNo> mobileNo;
@@ -30,7 +31,16 @@ private Collection<MobileNo> mobileNo;
 @OneToOne
 private Email email;
 
+@OneToOne
+private MarriageSeeker marriageSeeker;
 
+
+public MarriageSeeker getMarriageSeeker() {
+	return marriageSeeker;
+}
+public void setMarriageSeeker(MarriageSeeker marriageSeeker) {
+	this.marriageSeeker = marriageSeeker;
+}
 public Long getId() {
 	return id;
 }
@@ -52,7 +62,29 @@ public void setMiddleName(String middleName) {
 }
 
 
-
-
+public String getLastName() {
+	return lastName;
+}
+public void setLastName(String lastName) {
+	this.lastName = lastName;
+}
+public String getRelationName() {
+	return relationName;
+}
+public void setRelationName(String relationName) {
+	this.relationName = relationName;
+}
+public Collection<MobileNo> getMobileNo() {
+	return mobileNo;
+}
+public void setMobileNo(Collection<MobileNo> mobileNo) {
+	this.mobileNo = mobileNo;
+}
+public Email getEmail() {
+	return email;
+}
+public void setEmail(Email email) {
+	this.email = email;
+}
 
 }

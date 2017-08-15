@@ -11,12 +11,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.marriageonmind.persistence.dao.PrivilegeRepository;
+import com.marriageonmind.persistence.dao.RoleRepository;
+import com.marriageonmind.persistence.dao.UserRepository;
 import com.marriageonmind.persistence.model.Privilege;
 import com.marriageonmind.persistence.model.Role;
 import com.marriageonmind.persistence.model.User;
-import com.marriageonmind.repository.PrivilegeRepository;
-import com.marriageonmind.repository.RoleRepository;
-import com.marriageonmind.repository.UserRepository;
 
 @Component
 public class SetupDataLoader implements ApplicationListener<ContextRefreshedEvent> {

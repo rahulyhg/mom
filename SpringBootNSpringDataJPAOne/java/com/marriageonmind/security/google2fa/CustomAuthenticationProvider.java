@@ -8,8 +8,8 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 
+import com.marriageonmind.persistence.dao.UserRepository;
 import com.marriageonmind.persistence.model.User;
-import com.marriageonmind.repository.UserRepository;
 
 //@Component
 public class CustomAuthenticationProvider extends DaoAuthenticationProvider {

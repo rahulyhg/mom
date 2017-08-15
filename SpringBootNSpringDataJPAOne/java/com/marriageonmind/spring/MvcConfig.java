@@ -21,7 +21,7 @@ import com.marriageonmind.validation.EmailValidator;
 import com.marriageonmind.validation.PasswordMatchesValidator;
 
 @Configuration
-@ComponentScan(basePackages = { "org.baeldung.web" })
+@ComponentScan(basePackages = { "com.marriageonmind.web" })
 @EnableWebMvc
 public class MvcConfig extends WebMvcConfigurerAdapter {
 

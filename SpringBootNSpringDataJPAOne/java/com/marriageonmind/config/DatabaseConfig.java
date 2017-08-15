@@ -25,6 +25,7 @@ public class DatabaseConfig {
    */
   @Bean
   public DataSource dataSource() {
+	  System.out.println("data source in databaseconfig under config package");
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName(env.getProperty("db.driver"));
     dataSource.setUrl(env.getProperty("db.url"));

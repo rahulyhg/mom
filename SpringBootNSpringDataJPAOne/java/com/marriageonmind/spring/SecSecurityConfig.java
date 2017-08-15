@@ -23,7 +23,7 @@ import com.marriageonmind.security.google2fa.CustomAuthenticationProvider;
 import com.marriageonmind.security.google2fa.CustomWebAuthenticationDetailsSource;
 
 @Configuration
-@ComponentScan(basePackages = { "org.baeldung.security" })
+@ComponentScan(basePackages = { "com.marriageonmind.security" })
 // @ImportResource({ "classpath:webSecurityConfig.xml" })
 @EnableWebSecurity
 public class SecSecurityConfig extends WebSecurityConfigurerAdapter {

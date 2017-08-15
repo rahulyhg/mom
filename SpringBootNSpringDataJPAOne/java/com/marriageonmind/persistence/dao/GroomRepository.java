@@ -1,4 +1,4 @@
-package com.marriageonmind.repository;
+package com.marriageonmind.persistence.dao;
 
 import java.util.List;
 

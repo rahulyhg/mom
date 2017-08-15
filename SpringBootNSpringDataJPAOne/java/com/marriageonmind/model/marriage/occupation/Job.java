@@ -15,6 +15,22 @@ public class Job extends Occupation {
 
 private String officeName;
 
+public Long getId() {
+	return id;
+}
+
+public void setId(Long id) {
+	this.id = id;
+}
+
+public String getOfficeName() {
+	return officeName;
+}
+
+public void setOfficeName(String officeName) {
+	this.officeName = officeName;
+}
+
 
 
 

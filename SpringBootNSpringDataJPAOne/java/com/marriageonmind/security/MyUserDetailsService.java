@@ -15,10 +15,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.marriageonmind.persistence.dao.UserRepository;
 import com.marriageonmind.persistence.model.Privilege;
 import com.marriageonmind.persistence.model.Role;
 import com.marriageonmind.persistence.model.User;
-import com.marriageonmind.repository.UserRepository;
 
 @Service("userDetailsService")
 @Transactional

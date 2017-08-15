@@ -11,7 +11,7 @@ public class MobileNo implements Serializable{
 private String mobileNo;// must be exact 10 digit regex must be used
 private boolean verified;
 private boolean whatsAppNo;
-private boolean thisFBID;
+private boolean fbNo;
 
 public String getMobileNo() {
 	return mobileNo;
@@ -31,12 +31,13 @@ public boolean isWhatsAppNo() {
 public void setWhatsAppNo(boolean whatsAppNo) {
 	this.whatsAppNo = whatsAppNo;
 }
-public boolean isThisFBID() {
-	return thisFBID;
+public boolean isFbNo() {
+	return fbNo;
 }
-public void setThisFBID(boolean thisFBID) {
-	this.thisFBID = thisFBID;
+public void setFbNo(boolean fbNo) {
+	this.fbNo = fbNo;
 }
+
 
 
 }
