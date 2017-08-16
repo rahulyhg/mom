@@ -1,4 +1,4 @@
-package com.marriageonmind.persistence.dao;
+/*package com.marriageonmind.persistence.dao;
 
 import java.util.List;
 
@@ -8,5 +8,6 @@ import com.marriageonmind.model.marriage.groom.Groom;
 import com.marriageonmind.model.marriage.occupation.Occupation;
 
 public interface GroomRepository extends JpaRepository<Groom, Long> {
-List<Groom> findByOccupation(Occupation occupation);
+//List<Groom> findByOccupation(Occupation occupation);
 }
+*/
